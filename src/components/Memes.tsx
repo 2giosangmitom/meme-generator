@@ -11,4 +11,8 @@ export default [
 		id: 3,
 		img: "https://scontent.fdad1-4.fna.fbcdn.net/v/t1.15752-9/346148685_901513947620570_8006348387598751325_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Y46liPrOHggAX-wW8fJ&_nc_ht=scontent.fdad1-4.fna&oh=03_AdST1pli6MmCHJgimQG4KeN9mLxqmv70_xWlPUm8a4O_KQ&oe=64A16488",
 	},
+	{
+		id: 4,
+		img: "https://scontent.fdad1-2.fna.fbcdn.net/v/t1.15752-9/351105294_1218894385433546_2704567890308662751_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=TwceR-AuWDwAX_8xS-j&_nc_ht=scontent.fdad1-2.fna&oh=03_AdQ528vS0XYvlGm6UCJd1qwMUxbm4k07M48aNwz-th5EEQ&oe=64A152CD",
+	},
 ];
