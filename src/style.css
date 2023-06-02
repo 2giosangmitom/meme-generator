@@ -39,16 +39,15 @@
 	outline: none;
 	border: none;
 	background-image: linear-gradient(
-		90deg,
-		rgba(2, 0, 36, 1) 0%,
-		rgba(54, 9, 121, 1) 35%,
-		rgba(0, 65, 255, 1) 100%
+		50deg,
+		hsl(231, 47%, 49%),
+		hsl(228, 55%, 13%)
 	);
 	color: white;
 	border-radius: 10px;
 	font-size: 20px;
-	cursor: pointer;
 	box-shadow: 5px 5px 5px grey;
+	cursor: pointer;
 }
 
 .meme {
