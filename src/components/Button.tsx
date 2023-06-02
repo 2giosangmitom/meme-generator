@@ -6,7 +6,7 @@ export default function Button() {
 
 	function handleClick() {
 		const random = Math.floor(Math.random() * Memes.length);
-		setMemes(Memes[random].img);
+		setMemes(Memes[random]);
 	}
 
 	return (
