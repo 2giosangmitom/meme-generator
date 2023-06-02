@@ -34,8 +34,8 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 500px;
-	padding: 10px 50px;
+	width: 40%;
+	padding: 10px 0;
 	outline: none;
 	border: none;
 	background-image: linear-gradient(
