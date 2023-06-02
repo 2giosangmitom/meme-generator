@@ -2,7 +2,7 @@ import { useState } from "react";
 import Memes from "./Memes";
 
 export default function Button() {
-	const [quotes, setMemes] = useState("");
+	const [memes, setMemes] = useState("");
 
 	function handleClick() {
 		const random = Math.floor(Math.random() * Memes.length);
@@ -14,7 +14,7 @@ export default function Button() {
 			<button className="button" onClick={handleClick}>
 				Click me!
 			</button>
-			<img src={quotes} alt="meme" className="meme" />
+			<img src={memes} className="meme" />
 		</>
 	);
 }
