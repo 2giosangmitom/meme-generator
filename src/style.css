@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 65px;
+	background-image: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(54, 9, 121, 1) 35%,
+		rgba(0, 65, 255, 1) 100%
+	);
+	color: white;
+}
+
+.header--image {
+	height: 90%;
+}
+
+.header--title {
+	font-size: 20px;
+}
+
+.header--project {
+	font-size: 20px;
+}
+
+.button {
+	margin-top: 50px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 500px;
+	padding: 10px 50px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(54, 9, 121, 1) 35%,
+		rgba(0, 65, 255, 1) 100%
+	);
+	color: white;
+	border-radius: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	box-shadow: 5px 5px 5px grey;
+}
+
+.meme {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	max-height: 450px;
+	max-width: 1000px;
+}
