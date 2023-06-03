@@ -1,8 +1,8 @@
-import { useState } from "react";
-import Memes from "./Memes";
+import { useState } from 'react';
+import Memes from './Memes';
 
 export default function Button() {
-	const [memes, setMemes] = useState("");
+	const [memes, setMemes] = useState('');
 
 	function handleClick() {
 		const random = Math.floor(Math.random() * Memes.length);

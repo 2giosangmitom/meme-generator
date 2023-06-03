@@ -1,4 +1,4 @@
-import troll from "/troll.webp";
+import troll from '/troll.webp';
 
 export default function Header() {
 	return (
