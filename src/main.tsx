@@ -8,5 +8,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<Header />
 		<Button />
-	</React.StrictMode>
+	</React.StrictMode>,
 );
