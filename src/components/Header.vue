@@ -1,23 +1,17 @@
 <script setup>
-import { ref } from "vue";
-
 defineProps({
   msg: String,
 });
-
-const count = ref(0);
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-  <button class="count" type="button" @click="count++">
-    count is {{ count }}
-  </button>
+  <h1 class="notify">{{ msg }}</h1>
+  <h2>Hehehe</h2>
 </template>
 
 <style>
-.count {
-  text-transform: uppercase;
-  font-size: 1rem;
+.notify {
+  font-family: "Lobster", sans-serif;
+  font-size: 3rem;
 }
 </style>

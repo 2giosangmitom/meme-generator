@@ -3,5 +3,5 @@ import Header from "./components/Header.vue";
 </script>
 
 <template>
-  <Header msg="Duoc phet" />
+  <Header msg="Meme generator is under development" />
 </template>
