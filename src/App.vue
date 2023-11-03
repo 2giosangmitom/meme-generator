@@ -1,12 +1,12 @@
 <script setup>
-import HeaderItem from './components/HeaderItem.vue'
+import TheHeader from './components/TheHeader.vue'
 import { useMemeStore } from './stores/meme'
 const meme = useMemeStore()
 </script>
 
 <template>
   <main>
-    <HeaderItem />
+    <TheHeader />
 
     <div class="flex flex-col items-center">
       <button
