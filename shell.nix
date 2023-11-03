@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 pkgs.mkShell {
   packages = with pkgs; [
-    nodejs_20
-    corepack_20
+    nodejs_21
+    corepack_21
   ];
 }
