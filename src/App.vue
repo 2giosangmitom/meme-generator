@@ -15,7 +15,7 @@ const meme = useMemeStore()
       >
         Generate new meme
       </button>
-      <img v-bind:src="meme.meme" alt="meme" class="mt-4" />
+      <img v-bind:src="meme.meme" alt="meme" class="mt-4 sm:max-w-xl max-w-xs" />
     </div>
   </main>
 </template>
