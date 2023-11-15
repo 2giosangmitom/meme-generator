@@ -1,23 +1,47 @@
-<script setup>
-import TheHeader from './components/TheHeader.vue'
-import { useMemeStore } from './stores/meme'
-const meme = useMemeStore()
+<script setup lang="ts">
+import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <main>
-    <TheHeader />
+  <header>
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="flex flex-col items-center">
-      <button
-        class="font-sans font-medium text-lg mt-14 cursor-pointer px-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded uppercase outline-none w-fit"
-        @click="meme.newmeme()"
-      >
-        Generate new meme
-      </button>
-      <img v-bind:src="meme.meme" alt="meme" class="mt-4 sm:max-w-xl max-w-xs" />
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
     </div>
+  </header>
+
+  <main>
+    <TheWelcome />
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+header {
+  line-height: 1.5;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+</style>
