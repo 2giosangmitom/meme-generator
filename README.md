@@ -4,6 +4,7 @@ A meme generator website, made with Vue.js 3 + Firebase
 
 ## Table of contents
 
+<!--toc:start-->
 - [meme_generator](#memegenerator)
   - [Table of contents](#table-of-contents)
   - [Build Docker image from `Dockerfile`](#build-docker-image-from-dockerfile)
@@ -14,6 +15,7 @@ A meme generator website, made with Vue.js 3 + Firebase
     - [Type-Check, Compile and Minify for Production](#type-check-compile-and-minify-for-production)
     - [Run Unit Tests with [Vitest](https://vitest.dev/)](#run-unit-tests-with-vitesthttpsvitestdev)
     - [Lint with [ESLint](https://eslint.org/)](#lint-with-eslinthttpseslintorg)
+<!--toc:end-->
 
 ## Build Docker image from `Dockerfile`
 
