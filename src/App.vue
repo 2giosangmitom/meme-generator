@@ -7,6 +7,7 @@ const state = useMemeStore();
 <template>
   <main>
     <TheHeader />
+    <span>Total: {{ state.total }}</span>
 
     <div class="gen__meme">
       <button class="gen--button" @click="state.newMeme">Generate new meme</button>

@@ -17,12 +17,13 @@ async function getAllMemesFromFirebase(firebaseApp: FirebaseApp) {
   return items;
 }
 
-async function getDownloadLink(): Promise<string> {
+async function getDownloadLink(): Promise<{ downloadURL: string; total: number }> {
   const allMemes = await getAllMemesFromFirebase(firebaseApp);
   const randomMeme = randomItemFromArray(allMemes);
   const downloadURL = await getDownloadURL(randomMeme);
+  const total = allMemes.length;
 
-  return downloadURL;
+  return { downloadURL, total };
 }
 
 const env = import.meta.env;
@@ -38,16 +39,20 @@ const firebaseApp = initializeApp({
 });
 
 export const useMemeStore = defineStore('meme', () => {
-  const meme = refVue();
-  getDownloadLink().then((value) => {
-    meme.value = value;
+  const meme = refVue('');
+  const total = refVue(0);
+
+  getDownloadLink().then((v) => {
+    meme.value = v.downloadURL;
+    total.value = v.total;
   });
 
   function newMeme() {
-    getDownloadLink().then((value) => {
-      meme.value = value;
+    getDownloadLink().then((v) => {
+      meme.value = v.downloadURL;
+      total.value = v.total;
     });
   }
 
-  return { meme, newMeme };
+  return { meme, total, newMeme };
 });
