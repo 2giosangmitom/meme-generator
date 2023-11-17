@@ -6,11 +6,7 @@ RUN pnpm install
 COPY . .
 RUN pnpm build
 
-FROM node:21-alpine AS PRODUCTION_IMAGE
-WORKDIR /app
-COPY --from=BUILD_IMAGE /app/dist /app/dist
-COPY vite.config.ts package.json pnpm-lock.yaml ./
-RUN corepack enable && pnpm install
+FROM nginx:alpine AS PRODUCTION_IMAGE
+COPY --from=BUILD_IMAGE /app/dist /usr/share/nginx/html
 
-EXPOSE 8080
-CMD [ "pnpm", "preview" ]
+EXPOSE 80

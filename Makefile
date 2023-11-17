@@ -7,7 +7,7 @@ build:
 	@echo -e "✅ \033[1;32mSuccessfully built Docker image\033[0m"
 
 run:
-	docker run --name $(CONTAINER_NAME)  -dp 8080:8080 $(IMAGE_NAME):latest
+	docker run --name $(CONTAINER_NAME)  -dp 8080:80 $(IMAGE_NAME):latest
 
 stop:
 	docker container stop $(CONTAINER_NAME)
