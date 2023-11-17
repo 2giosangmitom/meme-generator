@@ -1,6 +1,7 @@
 {
   "name": "meme_generator",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",
