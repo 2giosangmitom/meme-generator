@@ -8,5 +8,7 @@ RUN pnpm build
 
 FROM nginx:alpine AS PRODUCTION_IMAGE
 COPY --from=BUILD_IMAGE /app/dist /usr/share/nginx/html
+ENV NGINX_PORT 8080
 
-EXPOSE 80
+EXPOSE 8080
+CMD [ "nginx", "-g", "daemon off;" ]
