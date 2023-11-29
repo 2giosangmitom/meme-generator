@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TheHeader from './components/TheHeader.vue';
-import { useMemeStore } from './stores/memes';
+import { useMemeStore } from './stores/meme';
 const state = useMemeStore();
 </script>
 

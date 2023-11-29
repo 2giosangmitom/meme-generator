@@ -1,11 +1,11 @@
-# meme_generator
+# meme generator
 
 A meme generator website, made with Vue.js 3 + Firebase
 
 ## Table of contents
 
 <!--toc:start-->
-- [meme_generator](#memegenerator)
+- [meme generator](#meme-generator)
   - [Table of contents](#table-of-contents)
   - [Build Docker image from `Dockerfile`](#build-docker-image-from-dockerfile)
     - [Prerequisite](#prerequisite)
