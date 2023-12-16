@@ -16,5 +16,7 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "vue"],
-  "rules": {}
+  "rules": {
+    "space-before-function-paren": "off"
+  }
 }
