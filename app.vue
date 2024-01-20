@@ -1,6 +1,9 @@
-<script setup lang="ts">
-import TheHeader from './components/TheHeader.vue';
-import { useMemeStore } from './stores/meme';
+<script setup>
+const appConfig = useAppConfig();
+useSeoMeta({
+  title: appConfig.title,
+  description: appConfig.description,
+});
 const state = useMemeStore();
 </script>
 
@@ -10,13 +13,27 @@ const state = useMemeStore();
     <span>Total: {{ state.total }}</span>
 
     <div class="gen__meme">
-      <button class="gen--button" @click="state.newMeme">Generate new meme</button>
+      <button class="gen--button" @click="state.newMeme">
+        Generate new meme
+      </button>
       <img v-bind:src="state.meme" />
     </div>
   </main>
 </template>
 
-<style scoped>
+<style>
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-pornhub: #ffa500;
+}
+
 .gen__meme {
   display: flex;
   flex-direction: column;

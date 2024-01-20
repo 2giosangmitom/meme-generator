@@ -1,75 +1,75 @@
-# meme generator
+# Nuxt 3 Minimal Starter
 
-A meme generator website, made with Vue.js 3 + Firebase
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Table of contents
+## Setup
 
-<!--toc:start-->
-- [meme generator](#meme-generator)
-  - [Table of contents](#table-of-contents)
-  - [Build Docker image from `Dockerfile`](#build-docker-image-from-dockerfile)
-    - [Prerequisite](#prerequisite)
-    - [Steps](#steps)
-  - [Project Setup (for local development)](#project-setup-for-local-development)
-    - [Compile and Hot-Reload for Development](#compile-and-hot-reload-for-development)
-    - [Type-Check, Compile and Minify for Production](#type-check-compile-and-minify-for-production)
-    - [Run Unit Tests with `Vitest`](#run-unit-tests-with-vitest)
-    - [Lint with `ESLint`](#lint-with-eslint)
-<!--toc:end-->
+Make sure to install the dependencies:
 
-## Build Docker image from `Dockerfile`
+```bash
+# npm
+npm install
 
-### Prerequisite
-
-- Docker (with buildx)
-- make
-
-### Steps
-
-- Build Docker image
-
-```sh
-make build
-```
-
-- Run Docker image
-
-```sh
-make run
-```
-
-- How to stop and remove the container?
-
-```sh
-make stop && make remove
-```
-
-## Project Setup (for local development)
-
-```sh
+# pnpm
 pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
-### Compile and Hot-Reload for Development
+## Development Server
 
-```sh
-pnpm dev
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Production
 
-```sh
-pnpm build
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
-### Run Unit Tests with `Vitest`
+Locally preview production build:
 
-```sh
-pnpm test:unit
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
 ```
 
-### Lint with `ESLint`
-
-```sh
-pnpm lint
-```
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
