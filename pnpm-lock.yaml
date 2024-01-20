@@ -30,7 +30,7 @@ devDependencies:
     version: 20.10.2
   '@vitejs/plugin-vue':
     specifier: ^4.5.1
-    version: 4.5.1(vite@5.0.5)(vue@3.3.9)
+    version: 4.5.1(vite@5.0.12)(vue@3.3.9)
   '@vue/eslint-config-prettier':
     specifier: ^9.0.0
     version: 9.0.0(eslint@8.55.0)(prettier@3.1.0)
@@ -62,8 +62,8 @@ devDependencies:
     specifier: ~5.3.2
     version: 5.3.2
   vite:
-    specifier: ^5.0.5
-    version: 5.0.5(@types/node@20.10.2)
+    specifier: ^5.0.12
+    version: 5.0.12(@types/node@20.10.2)
   vitest:
     specifier: ^0.34.6
     version: 0.34.6(jsdom@23.0.1)
@@ -1230,14 +1230,14 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vitejs/plugin-vue@4.5.1(vite@5.0.5)(vue@3.3.9):
+  /@vitejs/plugin-vue@4.5.1(vite@5.0.12)(vue@3.3.9):
     resolution: {integrity: sha512-DaUzYFr+2UGDG7VSSdShKa9sIWYBa1LL8KC0MNOf2H5LjcTPjob0x8LbkqXWmAtbANJCkpiQTj66UVcQkN2s3g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.5(@types/node@20.10.2)
+      vite: 5.0.12(@types/node@20.10.2)
       vue: 3.3.9(typescript@5.3.2)
     dev: true
 
@@ -3427,7 +3427,7 @@ packages:
       mlly: 1.4.2
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 5.0.5(@types/node@20.10.2)
+      vite: 5.0.12(@types/node@20.10.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -3439,8 +3439,8 @@ packages:
       - terser
     dev: true
 
-  /vite@5.0.5(@types/node@20.10.2):
-    resolution: {integrity: sha512-OekeWqR9Ls56f3zd4CaxzbbS11gqYkEiBtnWFFgYR2WV8oPJRRKq0mpskYy/XaoCL3L7VINDhqqOMNDiYdGvGg==}
+  /vite@5.0.12(@types/node@20.10.2):
+    resolution: {integrity: sha512-4hsnEkG3q0N4Tzf1+t6NdN9dg/L3BM+q8SWgbSPnJvrgH2kgdyzfVJwbR1ic69/4uMJJ/3dqDZZE5/WwqW8U1w==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -3528,7 +3528,7 @@ packages:
       strip-literal: 1.3.0
       tinybench: 2.5.1
       tinypool: 0.7.0
-      vite: 5.0.5(@types/node@20.10.2)
+      vite: 5.0.12(@types/node@20.10.2)
       vite-node: 0.34.6(@types/node@20.10.2)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
