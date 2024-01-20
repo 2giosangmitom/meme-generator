@@ -5,6 +5,7 @@ useSeoMeta({
   description: appConfig.description,
 });
 const state = useMemeStore();
+state.getNewMeme();
 </script>
 
 <template>
@@ -13,7 +14,7 @@ const state = useMemeStore();
     <span>Total: {{ state.total }}</span>
 
     <div class="gen__meme">
-      <button class="gen--button" @click="state.newMeme">
+      <button class="gen--button" @click="state.getNewMeme">
         Generate new meme
       </button>
       <img v-bind:src="state.meme" />
