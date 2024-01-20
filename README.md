@@ -1,75 +1,63 @@
-# Nuxt 3 Minimal Starter
+# meme generator
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A meme generator website, made with Nuxt.js 3 + Firebase
 
-## Setup
+## Table of contents
 
-Make sure to install the dependencies:
+<!--toc:start-->
+- [meme generator](#meme-generator)
+  - [Table of contents](#table-of-contents)
+  - [Build Docker image from `Dockerfile`](#build-docker-image-from-dockerfile)
+    - [Prerequisite](#prerequisite)
+    - [Steps](#steps)
+  - [Project Setup (for local development)](#project-setup-for-local-development)
+    - [Compile and Hot-Reload for Development](#compile-and-hot-reload-for-development)
+    - [Compile and Minify for Production](#compile-and-minify-for-production)
+<!--toc:end-->
 
-```bash
-# npm
-npm install
+## Build Docker image from `Dockerfile`
 
-# pnpm
+### Prerequisite
+
+- Docker
+- make
+
+### Steps
+
+- Build Docker image
+
+```sh
+make build
+```
+
+- Run Docker image
+
+```sh
+make run
+```
+
+- How to stop and remove the container?
+
+```sh
+make stop && make remove
+```
+
+## Project Setup (for local development)
+
+```sh
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+- Add `.env` file
 
-Start the development server on `http://localhost:3000`:
+### Compile and Hot-Reload for Development
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```sh
+pnpm dev
 ```
 
-## Production
+### Compile and Minify for Production
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```sh
+pnpm build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
