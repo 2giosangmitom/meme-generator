@@ -1,7 +1,7 @@
 <template>
   <header class="header__container">
     <a href="https://github.com/2giosangmitom/meme_generator" target="_blank">
-      <img src="~/assets/troll.webp" alt="troll face" width="50" height="50" />
+      <img src="@/assets/troll.webp" alt="troll face" width="50" height="50" />
     </a>
     <h2>Meme generator</h2>
     <h2>VueJS</h2>

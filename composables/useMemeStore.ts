@@ -1,4 +1,4 @@
-import { getDownloadLink } from "../utils/firebase";
+import { getDownloadLink } from "@/utils/firebase";
 
 export const useMemeStore = defineStore("memeStore", {
 	state: () => ({ meme: "", total: 0 }),
