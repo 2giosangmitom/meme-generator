@@ -19,7 +19,7 @@ A meme generator website, made with Nuxt.js 3 + Firebase
 
 ### Prerequisite
 
-- Docker (with buildx)
+- Docker
 - make
 
 ### Steps
