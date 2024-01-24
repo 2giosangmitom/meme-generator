@@ -9,21 +9,21 @@ defineProps({
 <template>
   <span>Total: {{ total }}</span>
 
-  <div class="gen__meme">
-    <button class="gen--button" @click="getNewMeme">Generate new meme</button>
+  <div class="meme">
+    <button class="meme__button" @click="getNewMeme">Generate new meme</button>
     <img v-bind:src="meme" />
   </div>
 </template>
 
 <style scoped>
-.gen__meme {
+.meme {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
 }
 
-.gen__meme .gen--button {
+.meme__button {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -34,31 +34,31 @@ defineProps({
   border-radius: 5px;
 }
 
-.gen__meme .gen--button:active {
+.meme__button:active {
   scale: 0.9;
   transition-duration: 300ms;
 }
 
-.gen__meme img {
+.meme img {
   margin: 2rem 0;
   max-width: 1000px;
   height: auto;
 }
 
 @media screen and (max-width: 600px) {
-  .gen__meme img {
+  .meme img {
     max-width: 400px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .gen__meme img {
+  .meme img {
     max-width: 400px;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .gen__meme img {
+  .meme img {
     max-width: 300px;
   }
 }
