@@ -1,5 +1,5 @@
 <template>
-  <header class="header__container">
+  <header class="header">
     <a href="https://github.com/2giosangmitom/meme_generator" target="_blank">
       <img src="@/assets/troll.webp" alt="troll face" width="50" height="50" />
     </a>
@@ -9,7 +9,7 @@
 </template>
 
 <style scoped>
-.header__container {
+.header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -18,7 +18,7 @@
   height: 4rem;
 }
 
-.header__container h2 {
+.header h2 {
   background-color: var(--bg-pornhub);
   color: black;
   padding: 0.25rem 0.5rem;
@@ -26,18 +26,18 @@
 }
 
 @media screen and (max-width: 600px) {
-  .header__container img {
+  .header img {
     width: 40px;
     height: 40px;
   }
 
-  .header__container h2 {
+  .header h2 {
     font-size: 1.25rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .header__container h2 {
+  .header h2 {
     font-size: 1rem;
   }
 }
