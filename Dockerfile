@@ -1,13 +1,25 @@
-FROM node:21-alpine AS BUILD_IMAGE
+FROM node:21-alpine AS base
+
+# Install dependencies only when needed
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 RUN corepack enable
-COPY . .
-RUN pnpm install && pnpm build
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
-FROM node:21-alpine AS PRODUCTION_IMAGE
+# Rebuild the source code only when needed
+FROM base AS builder
+RUN corepack enable
 WORKDIR /app
-COPY --from=BUILD_IMAGE /app/.output ./.output
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN pnpm build
 
+# Run the application
+FROM base AS runner
+ENV NODE_ENV production
+WORKDIR /app
+COPY --from=builder /app/.output ./.output
 EXPOSE 3000
-
 CMD [ "node", ".output/server/index.mjs" ]
