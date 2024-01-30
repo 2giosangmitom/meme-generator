@@ -41,7 +41,7 @@ defineProps({
 
 .meme img {
   margin: 2rem 0;
-  max-width: 1000px;
+  max-width: 60%;
   height: auto;
 }
 
