@@ -11,7 +11,7 @@ This project is a fun and easy-to-use Nuxt.js application for generating random 
    - pnpm package manager installed: [https://pnpm.io/installation](https://pnpm.io/installation)
 
 > [!TIP]
-> The project includes the `flake.nix` file for dependency management, enabling developers to leverage nix develop for a convenient development environment setup. You can use `nix develop` to enter development environment with out install prerequisites
+> The project includes the `flake.nix` file for dependency management, enabling developers to leverage nix develop for a convenient development environment setup. You can use `nix develop` to enter development environment with out install prerequisites with [Nix](https://nixos.org/download)
 
 2. **Clone the repository:**
 
