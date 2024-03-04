@@ -47,4 +47,4 @@ All commands are run from the root of the project, from a terminal:
 | `make build`      | Build Docker image                                     |
 | `make run`        | Run application with Docker                            |
 | `make stop`       | Stop Docker container                                  |
-| `make remove`     | Remove docker container                                |
+| `make remove`     | Remove Docker container                                |
