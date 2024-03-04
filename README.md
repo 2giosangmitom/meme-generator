@@ -1,63 +1,50 @@
-# meme generator
+## Random Meme Generator
 
-A meme generator website, made with Nuxt.js 3 + Firebase
+This project is a fun and easy-to-use Nuxt.js application for generating random memes.
 
-## Table of contents
+### Development Setup
 
-<!--toc:start-->
-- [meme generator](#meme-generator)
-  - [Table of contents](#table-of-contents)
-  - [Build Docker image from `Dockerfile`](#build-docker-image-from-dockerfile)
-    - [Prerequisite](#prerequisite)
-    - [Steps](#steps)
-  - [Project Setup (for local development)](#project-setup-for-local-development)
-    - [Compile and Hot-Reload for Development](#compile-and-hot-reload-for-development)
-    - [Compile and Minify for Production](#compile-and-minify-for-production)
-<!--toc:end-->
+1. **Prerequisites:**
 
-## Build Docker image from `Dockerfile`
+   - Node.js (version 20 or newer) installed: [https://nodejs.org/en/learn/getting-started/how-to-install-nodejs](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
+   - Basic understanding of Nuxt.js: [https://nuxt.com/](https://nuxt.com/)
+   - pnpm package manager installed: [https://pnpm.io/installation](https://pnpm.io/installation)
 
-### Prerequisite
+2. **Clone the repository:**
 
-- Docker
-- make
-
-### Steps
-
-- Build Docker image
-
-```sh
-make build
+```bash
+git clone https://github.com/2giosangmitom/meme_generator.git
 ```
 
-- Run Docker image
+3. **Install dependencies:**
 
-```sh
-make run
-```
-
-- How to stop and remove the container?
-
-```sh
-make stop && make remove
-```
-
-## Project Setup (for local development)
-
-```sh
+```bash
 pnpm install
 ```
 
-- Add `.env` file
+4. **Run the development server:**
 
-### Compile and Hot-Reload for Development
-
-```sh
+```bash
 pnpm dev
 ```
 
-### Compile and Minify for Production
+This will start the development server and open the application in your default web browser at `http://localhost:3000`.
 
-```sh
-pnpm build
-```
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command           | Description                                            |
+| ----------------- | ------------------------------------------------------ |
+| `pnpm install`    | Installs project dependencies                          |
+| `pnpm dev`        | Starts local development server on port 3000           |
+| `pnpm build`      | Builds the production ready website                    |
+| `pnpm start`      | Previews the built website locally                     |
+| `pnpm check`      | Lints the project for code style and formatting issues |
+| `pnpm fix`        | Automatically fixes linting issues if possible         |
+| `pnpm test`       | Runs unit tests using Jest                             |
+| `pnpm test:watch` | Runs unit tests in watch mode for continuous feedback  |
+| `make build`      | Build Docker image                                     |
+| `make run`        | Run application with Docker                            |
+| `make stop`       | Stop Docker container                                  |
+| `make remove`     | Remove docker container                                |
