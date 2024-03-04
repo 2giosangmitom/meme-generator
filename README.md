@@ -10,6 +10,9 @@ This project is a fun and easy-to-use Nuxt.js application for generating random 
    - Basic understanding of Nuxt.js: [https://nuxt.com/](https://nuxt.com/)
    - pnpm package manager installed: [https://pnpm.io/installation](https://pnpm.io/installation)
 
+> NOTE:
+> The project includes the `flake.nix` file for dependency management, enabling developers to leverage nix develop for a convenient development environment setup. You can use `nix develop` to enter development environment with out install prerequisites
+
 2. **Clone the repository:**
 
 ```bash
@@ -48,3 +51,4 @@ All commands are run from the root of the project, from a terminal:
 | `make run`        | Run application with Docker                            |
 | `make stop`       | Stop Docker container                                  |
 | `make remove`     | Remove Docker container                                |
+| `nix develop`     | Enter development environment                          |
