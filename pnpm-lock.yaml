@@ -18,13 +18,13 @@ dependencies:
 devDependencies:
   '@nuxt/devtools':
     specifier: ^1.0.8
-    version: 1.0.8(nuxt@3.11.0)(vite@5.1.4)
+    version: 1.0.8(nuxt@3.11.0)(vite@5.1.6)
   '@nuxtjs/google-fonts':
-    specifier: ^3.1.3
-    version: 3.1.3
+    specifier: ^3.2.0
+    version: 3.2.0
   nuxt:
     specifier: ^3.11.0
-    version: 3.11.0(vite@5.1.4)
+    version: 3.11.0(vite@5.1.6)
   vue:
     specifier: ^3.4.21
     version: 3.4.21
@@ -1448,7 +1448,7 @@ packages:
     resolution: {integrity: sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==}
     dev: true
 
-  /@nuxt/devtools-kit@1.0.8(nuxt@3.11.0)(vite@5.1.4):
+  /@nuxt/devtools-kit@1.0.8(nuxt@3.11.0)(vite@5.1.6):
     resolution: {integrity: sha512-j7bNZmoAXQ1a8qv6j6zk4c/aekrxYqYVQM21o/Hy4XHCUq4fajSgpoc8mjyWJSTfpkOmuLyEzMexpDWiIVSr6A==}
     peerDependencies:
       nuxt: ^3.9.0
@@ -1457,8 +1457,8 @@ packages:
       '@nuxt/kit': 3.10.3
       '@nuxt/schema': 3.10.3
       execa: 7.2.0
-      nuxt: 3.11.0(vite@5.1.4)
-      vite: 5.1.4
+      nuxt: 3.11.0(vite@5.1.6)
+      vite: 5.1.6
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -1480,7 +1480,7 @@ packages:
       semver: 7.6.0
     dev: true
 
-  /@nuxt/devtools@1.0.8(nuxt@3.11.0)(vite@5.1.4):
+  /@nuxt/devtools@1.0.8(nuxt@3.11.0)(vite@5.1.6):
     resolution: {integrity: sha512-o6aBFEBxc8OgVHV4OPe2g0q9tFIe9HiTxRiJnlTJ+jHvOQsBLS651ArdVtwLChf9UdMouFlpLLJ1HteZqTbtsQ==}
     hasBin: true
     peerDependencies:
@@ -1488,7 +1488,7 @@ packages:
       vite: '*'
     dependencies:
       '@antfu/utils': 0.7.7
-      '@nuxt/devtools-kit': 1.0.8(nuxt@3.11.0)(vite@5.1.4)
+      '@nuxt/devtools-kit': 1.0.8(nuxt@3.11.0)(vite@5.1.6)
       '@nuxt/devtools-wizard': 1.0.8
       '@nuxt/kit': 3.10.3
       birpc: 0.2.17
@@ -1505,7 +1505,7 @@ packages:
       launch-editor: 2.6.1
       local-pkg: 0.5.0
       magicast: 0.3.3
-      nuxt: 3.11.0(vite@5.1.4)
+      nuxt: 3.11.0(vite@5.1.6)
       nypm: 0.3.6
       ohash: 1.1.3
       pacote: 17.0.6
@@ -1518,9 +1518,9 @@ packages:
       simple-git: 3.22.0
       sirv: 2.0.4
       unimport: 3.7.1(rollup@4.13.0)
-      vite: 5.1.4
-      vite-plugin-inspect: 0.8.3(@nuxt/kit@3.10.3)(vite@5.1.4)
-      vite-plugin-vue-inspector: 4.0.2(vite@5.1.4)
+      vite: 5.1.6
+      vite-plugin-inspect: 0.8.3(@nuxt/kit@3.10.3)(vite@5.1.6)
+      vite-plugin-vue-inspector: 4.0.2(vite@5.1.6)
       which: 3.0.1
       ws: 8.16.0
     transitivePeerDependencies:
@@ -1596,7 +1596,7 @@ packages:
       pkg-types: 1.0.3
       scule: 1.3.0
       std-env: 3.7.0
-      ufo: 1.4.0
+      ufo: 1.5.2
       unimport: 3.7.1(rollup@4.13.0)
       untyped: 1.4.2
     transitivePeerDependencies:
@@ -1714,11 +1714,11 @@ packages:
       - vue-tsc
     dev: true
 
-  /@nuxtjs/google-fonts@3.1.3:
-    resolution: {integrity: sha512-gHwstHXQKd/r9O2WnQR4UJbi7Rfb9No1/gF4gqP+y18h1DAAZUOYPBF5EAPGjZKgDOW2XbZHP8Rw3oSDTpIT1A==}
+  /@nuxtjs/google-fonts@3.2.0:
+    resolution: {integrity: sha512-cGAjDJoeQ2jm6VJCo4AtSmKO6KjsbO9RSLj8q261fD0lMVNMZCxkCxBkg8L0/2Vfgp+5QBHWVXL71p1tiybJFw==}
     dependencies:
-      '@nuxt/kit': 3.10.3
-      google-fonts-helper: 3.4.1
+      '@nuxt/kit': 3.11.0
+      google-fonts-helper: 3.5.0
       pathe: 1.1.2
     transitivePeerDependencies:
       - rollup
@@ -3857,13 +3857,13 @@ packages:
       slash: 5.1.0
       unicorn-magic: 0.1.0
 
-  /google-fonts-helper@3.4.1:
-    resolution: {integrity: sha512-unq9c1NF771916DrVR2MTpMJ5iHiMSjMBApErjhWT1FZIE+7x+Qik+w6cYi5jw/KtHELz+tyGAKgQetTU9wrlA==}
+  /google-fonts-helper@3.5.0:
+    resolution: {integrity: sha512-QcKvB3Y+jJFpvBUp/iG1oe9BbKirrjwU2mzJzKGGb5czz6T93CCP9A8IlfCoZnko7b1+gPH3yVghXP5EBvunDg==}
     dependencies:
       deepmerge: 4.3.1
       hookable: 5.5.3
       ofetch: 1.3.3
-      ufo: 1.4.0
+      ufo: 1.5.2
     dev: true
 
   /graceful-fs@4.2.11:
@@ -4923,7 +4923,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /nuxt@3.11.0(vite@5.1.4):
+  /nuxt@3.11.0(vite@5.1.6):
     resolution: {integrity: sha512-eRjmXk2hC+mUghj46H+sndVjK+VMmS8W5HqWE+k18vASrTxtpHxgG2+gxiiDaOPi/dY0POv+cg5GEs8muZPjEQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
@@ -4937,7 +4937,7 @@ packages:
         optional: true
     dependencies:
       '@nuxt/devalue': 2.0.2
-      '@nuxt/devtools': 1.0.8(nuxt@3.11.0)(vite@5.1.4)
+      '@nuxt/devtools': 1.0.8(nuxt@3.11.0)(vite@5.1.6)
       '@nuxt/kit': 3.11.0
       '@nuxt/schema': 3.11.0
       '@nuxt/telemetry': 2.5.3
@@ -6614,7 +6614,7 @@ packages:
       vscode-uri: 3.0.8
     dev: true
 
-  /vite-plugin-inspect@0.8.3(@nuxt/kit@3.10.3)(vite@5.1.4):
+  /vite-plugin-inspect@0.8.3(@nuxt/kit@3.10.3)(vite@5.1.6):
     resolution: {integrity: sha512-SBVzOIdP/kwe6hjkt7LSW4D0+REqqe58AumcnCfRNw4Kt3mbS9pEBkch+nupu2PBxv2tQi69EQHQ1ZA1vgB/Og==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -6634,13 +6634,13 @@ packages:
       perfect-debounce: 1.0.0
       picocolors: 1.0.0
       sirv: 2.0.4
-      vite: 5.1.4
+      vite: 5.1.6
     transitivePeerDependencies:
       - rollup
       - supports-color
     dev: true
 
-  /vite-plugin-vue-inspector@4.0.2(vite@5.1.4):
+  /vite-plugin-vue-inspector@4.0.2(vite@5.1.6):
     resolution: {integrity: sha512-KPvLEuafPG13T7JJuQbSm5PwSxKFnVS965+MP1we2xGw9BPkkc/+LPix5MMWenpKWqtjr0ws8THrR+KuoDC8hg==}
     peerDependencies:
       vite: ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0
@@ -6654,44 +6654,9 @@ packages:
       '@vue/compiler-dom': 3.4.21
       kolorist: 1.8.0
       magic-string: 0.30.7
-      vite: 5.1.4
+      vite: 5.1.6
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /vite@5.1.4:
-    resolution: {integrity: sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.19.12
-      postcss: 8.4.35
-      rollup: 4.12.0
-    optionalDependencies:
-      fsevents: 2.3.3
     dev: true
 
   /vite@5.1.6:
