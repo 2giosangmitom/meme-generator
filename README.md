@@ -43,10 +43,6 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm dev`        | Starts local development server on port 3000           |
 | `pnpm build`      | Builds the production ready website                    |
 | `pnpm start`      | Previews the built website locally                     |
-| `pnpm check`      | Lints the project for code style and formatting issues |
-| `pnpm fix`        | Automatically fixes linting issues if possible         |
-| `pnpm test`       | Runs unit tests using Jest                             |
-| `pnpm test:watch` | Runs unit tests in watch mode for continuous feedback  |
 | `make build`      | Build Docker image                                     |
 | `make run`        | Run application with Docker                            |
 | `make stop`       | Stop Docker container                                  |
