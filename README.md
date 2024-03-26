@@ -1,4 +1,4 @@
-## Random Meme Generator
+# Random Meme Generator
 
 This project is a fun and easy-to-use Nuxt.js application for generating random memes.
 
