@@ -1,19 +1,35 @@
 {
-  description = "Random meme generator, made with Nuxt.js 3";
+  description = "A website for generating random memes";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = nixpkgs.legacyPackages.${system}; in {
+  outputs = {
+    nixpkgs,
+    flake-utils,
+    ...
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = nixpkgs.legacyPackages.${system};
+        packages = with pkgs; [
+          nodejs_21
+          nodePackages.pnpm
+          fish
+          statix
+          alejandra
+          deadnix
+          nil
+        ];
+      in {
         devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            nodejs_21
-            corepack_21
-          ];
+          buildInputs = packages;
+          shellHook = ''
+            exec fish
+          '';
         };
-        formatter = pkgs.nixpkgs-fmt;
+        formatter = pkgs.alejandra;
       }
     );
 }
