@@ -1,7 +1,0 @@
-.git/
-node_modules/
-.output
-.nuxt
-*.md
-.dockerignore
-Dockerfile
