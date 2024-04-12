@@ -1,5 +1,5 @@
 {
-  description = "A website for generating random memes";
+  description = "Random Memes - Instant Laughs";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -16,7 +16,6 @@
         packages = with pkgs; [
           nodejs_21
           nodePackages.pnpm
-          fish
           statix
           alejandra
           deadnix
@@ -25,9 +24,6 @@
       in {
         devShell = pkgs.mkShell {
           buildInputs = packages;
-          shellHook = ''
-            exec fish
-          '';
         };
         formatter = pkgs.alejandra;
       }
