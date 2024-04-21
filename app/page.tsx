@@ -13,7 +13,7 @@ export default function Page() {
   const [meme, setMeme] = useState<Meme>();
 
   const getMeme = async () => {
-    const res = await fetch("http://localhost:3000/api");
+    const res = await fetch("/api");
     const data: Meme[] = await res.json();
     const randomMeme = Math.floor(Math.random() * data.length);
 
