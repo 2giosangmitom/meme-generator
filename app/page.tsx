@@ -10,16 +10,28 @@ type Meme = {
 };
 
 export default function Page() {
-  const [data, setData] = useState<{ meme: Meme[]; total: number }>();
-  const [isFetched, setIsFetched] = useState(false);
-  const [meme, setMeme] = useState<Meme>();
+  const [data, setData] = useState<{ meme: Meme[]; total: number } | null>(
+    null
+  );
+  const [meme, setMeme] = useState<Meme | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const fetchData = async () => {
-    const res = await fetch("/api");
-    const data: Meme[] = await res.json();
-    setData({ meme: data, total: data.length });
-    setIsFetched(true);
+    try {
+      const res = await fetch("/api");
+      if (!res.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      const data: Meme[] = await res.json();
+      setData({ meme: data, total: data.length });
+    } finally {
+      setLoading(false);
+    }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const newMeme = () => {
     if (!data) {
@@ -36,26 +48,31 @@ export default function Page() {
           Meme generator
         </h1>
       </div>
-      <span>Total memes: {(data && data.total) || 0}</span>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <span>Total memes: {data?.total || 0}</span>
 
-      <div className="flex flex-col items-center justify-center">
-        <Button
-          className="mt-5 active:scale-[0.9] duration-100"
-          onClick={() => {
-            if (!isFetched) {
-              fetchData();
-            }
-            newMeme();
-          }}
-        >
-          New Meme
-        </Button>
-        <div className="flex justify-center w-1/2">
-          {meme && (
-            <img className="my-10 h-auto" src={meme.downloadUrl} alt="meme" />
-          )}
-        </div>
-      </div>
+          <div className="flex flex-col items-center justify-center">
+            <Button
+              className="mt-5 active:scale-[0.9] duration-100"
+              onClick={() => newMeme()}
+            >
+              New Meme
+            </Button>
+            <div className="flex justify-center w-1/2">
+              {meme && (
+                <img
+                  className="my-10 h-auto"
+                  src={meme.downloadUrl}
+                  alt="meme"
+                />
+              )}
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }
