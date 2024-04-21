@@ -10,14 +10,23 @@ type Meme = {
 };
 
 export default function Page() {
-  const [meme, setMeme] = useState<{ meme: Meme; total: number }>();
+  const [data, setData] = useState<{ meme: Meme[]; total: number }>();
+  const [isFetched, setIsFetched] = useState(false);
+  const [meme, setMeme] = useState<Meme>();
 
-  const getMeme = async () => {
+  const fetchData = async () => {
     const res = await fetch("/api");
     const data: Meme[] = await res.json();
-    const randomMeme = Math.floor(Math.random() * data.length);
+    setData({ meme: data, total: data.length });
+    setIsFetched(true);
+  };
 
-    setMeme({ meme: data[randomMeme], total: data.length });
+  const newMeme = () => {
+    if (!data) {
+      return;
+    }
+    const random = Math.floor(Math.random() * data.total);
+    setMeme(data.meme[random]);
   };
 
   return (
@@ -27,22 +36,23 @@ export default function Page() {
           Meme generator
         </h1>
       </div>
-      <span>Total memes: {(meme && meme.total) || 0}</span>
+      <span>Total memes: {(data && data.total) || 0}</span>
 
       <div className="flex flex-col items-center justify-center">
         <Button
           className="mt-5 active:scale-[0.9] duration-100"
-          onClick={() => getMeme()}
+          onClick={() => {
+            if (!isFetched) {
+              fetchData();
+            }
+            newMeme();
+          }}
         >
           New Meme
         </Button>
         <div className="flex justify-center w-1/2">
           {meme && (
-            <img
-              className="my-10 h-auto"
-              src={meme.meme.downloadUrl}
-              alt="meme"
-            />
+            <img className="my-10 h-auto" src={meme.downloadUrl} alt="meme" />
           )}
         </div>
       </div>
