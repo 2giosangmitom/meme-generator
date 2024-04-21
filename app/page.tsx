@@ -10,14 +10,14 @@ type Meme = {
 };
 
 export default function Page() {
-  const [meme, setMeme] = useState<Meme>();
+  const [meme, setMeme] = useState<{ meme: Meme; total: number }>();
 
   const getMeme = async () => {
     const res = await fetch("/api");
     const data: Meme[] = await res.json();
     const randomMeme = Math.floor(Math.random() * data.length);
 
-    setMeme(data[randomMeme]);
+    setMeme({ meme: data[randomMeme], total: data.length });
   };
 
   return (
@@ -27,6 +27,7 @@ export default function Page() {
           Meme generator
         </h1>
       </div>
+      <span>Total memes: {(meme && meme.total) || 0}</span>
 
       <div className="flex flex-col items-center justify-center">
         <Button
@@ -35,9 +36,13 @@ export default function Page() {
         >
           New Meme
         </Button>
-        <div className="flex justify-center">
+        <div className="flex justify-center w-1/2">
           {meme && (
-            <img className="w-1/2 my-10" src={meme!.downloadUrl} alt="meme" />
+            <img
+              className="my-10 h-auto"
+              src={meme.meme.downloadUrl}
+              alt="meme"
+            />
           )}
         </div>
       </div>
