@@ -13,22 +13,23 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@vercel/blob": "^0.23.2",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
-    "next": "14.2.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "clsx": "^2.1.1",
+    "next": "14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "eslint": "^9.1.0",
-    "eslint-config-next": "14.2.2",
+    "@types/node": "^20.12.8",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.2.0",
+    "eslint-config-next": "14.2.3",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
-    "vercel": "^34.1.1"
-  }
+    "vercel": "^34.1.8"
+  },
+  "packageManager": "pnpm@9.1.0-0+sha256.c557b24d2298d9b5e3be7086ebf55a28253b008324d545f72645a6de89844102"
 }
