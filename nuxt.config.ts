@@ -12,5 +12,10 @@ export default defineNuxtConfig({
       measurementId: process.env.MEASUREMENT_ID,
     },
   },
+  nitro: {
+    firebase: {
+      gen: 2,
+    },
+  },
   modules: ["@nuxt/image", "nuxt-vuefire", "@pinia/nuxt"],
 });
