@@ -1,0 +1,38 @@
+name: Deploy to Firebase Hosting on PR
+
+on: pull_request
+
+permissions:
+  checks: write
+  contents: read
+  pull-requests: write
+
+jobs:
+  build_and_preview:
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo API_KEY=${{ secrets.API_KEY }} >> .env
+          echo AUTH_DOMAIN=${{ secrets.AUTH_DOMAIN }} >> .env
+          echo PROJECT_ID=${{ secrets.PROJECT_ID }} >> .env
+          echo STORAGE_BUCKET=${{ secrets.STORAGE_BUCKET }} >> .env
+          echo MESSAGING_SENDER_ID=${{ secrets.MESSAGING_SENDER_ID }} >> .env
+          echo APP_ID=${{ secrets.APP_ID }} >> .env
+          echo MEASUREMENT_ID=${{ secrets.MEASUREMENT_ID }} >> .env
+
+      - name: Build project
+        run: docker build -o dist .
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MEME_GENERATOR_52AC0 }}
+          projectId: meme-generator-52ac0

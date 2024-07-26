@@ -1,5 +1,5 @@
 {
-  description = "NodeJS project flake template";
+  description = "";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -18,6 +18,7 @@
           buildInputs = with pkgs; [
             nodejs_20
             corepack_20
+            firebase-tools
           ];
         };
       }
