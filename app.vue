@@ -1,19 +1,24 @@
 <script setup lang="ts">
+import { useMemeStore } from "./store/useMemeStore";
+
 useSeoMeta({
   title: "Meme generator",
+  description: "Random Memes - Instant Laughs",
 });
 
-const total = ref(0);
+const memeStore = useMemeStore();
+memeStore.init();
 </script>
 
 <template>
   <header>
-    <img src="/images/troll.png" alt="troll face" />
+    <NuxtImg src="/images/troll.png" alt="troll face" />
     <div>Meme generator</div>
-    <span>Total memes: {{ total }}</span>
+    <span>Total memes: {{ memeStore.total }}</span>
   </header>
   <main>
-    <button>Get new meme</button>
+    <button @click="memeStore.getNewMeme">Get new meme</button>
+    <NuxtImg :src="memeStore.src" />
   </main>
 </template>
 
@@ -71,7 +76,13 @@ button:active {
 
 main {
   display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+  flex-direction: column;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+main img {
+  max-width: 80%;
+  margin-top: 1rem;
 }
 </style>
