@@ -81,4 +81,10 @@ onMounted(async () => {
   border-radius: 8px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 660px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
 </style>
