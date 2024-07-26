@@ -1,0 +1,16 @@
+{
+  "name": "Nuxt.js Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {
+      "multiUser": true,
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["Vue.volar"]
+    }
+  },
+  "postCreateCommand": "mkdir ~/.config/nix && echo 'experimental-features = nix-command flakes' > ~/.config/nix/nix.conf"
+}
