@@ -24,7 +24,7 @@ onMounted(() => {
     <button class="main__button" @click="memeStore.getNewMeme">
       Get new meme
     </button>
-    <NuxtImg class="main__image" :src="memeStore.src" />
+    <img class="main__image" :src="memeStore.src" />
   </main>
 </template>
 
