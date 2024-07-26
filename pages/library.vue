@@ -22,8 +22,10 @@ onMounted(async () => {
 
 <template>
   <div class="meme-container">
-    <div v-if="isLoading" class="skeleton-container">
-      <div v-for="n in 10" :key="n" class="skeleton"></div>
+    <div v-if="isLoading" class="masonry-grid">
+      <div v-for="n in 6" :key="n" class="masonry-item">
+        <div class="skeleton"></div>
+      </div>
     </div>
     <div v-else class="masonry-grid">
       <div class="masonry-item" v-for="meme in allMemes" :key="meme">
@@ -46,8 +48,8 @@ onMounted(async () => {
 }
 
 .skeleton {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  padding-top: 100%;
   background-color: #e0e0e0;
   animation: pulse 1.5s infinite ease-in-out;
   border-radius: 8px;
@@ -73,12 +75,17 @@ onMounted(async () => {
 .masonry-item {
   break-inside: avoid;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.masonry-item .skeleton,
+.masonry-item .meme-image {
+  width: 100%;
+  border-radius: 8px;
 }
 
 .meme-image {
-  width: 100%;
   display: block;
-  border-radius: 8px;
   object-fit: cover;
 }
 
