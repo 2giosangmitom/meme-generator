@@ -5,23 +5,27 @@ import {
   type StorageReference,
 } from "firebase/storage";
 
-export async function getAllMemes() {
+// Function to retrieve all meme items from Firebase Storage
+export async function getAllMemes(): Promise<StorageReference[]> {
   try {
     const storage = useFirebaseStorage();
     const memeStorageRef = ref(storage);
     const allMemes = await listAll(memeStorageRef);
 
     return allMemes.items;
-  } catch (e) {
-    throw new Error(`Failed to get all memes available ${e}`);
+  } catch (error) {
+    throw new Error(`Failed to retrieve all memes: ${error}`);
   }
 }
 
-export async function getDownloadLink(memeItem: StorageReference) {
+// Function to get the download URL of a specific meme item
+export async function getDownloadLink(
+  memeItem: StorageReference,
+): Promise<string> {
   try {
     const downloadUrl = await getDownloadURL(memeItem);
     return downloadUrl;
-  } catch (e) {
-    throw new Error(`Failed to get download link\n >>> ${e}`);
+  } catch (error) {
+    throw new Error(`Failed to get download link: ${error}`);
   }
 }

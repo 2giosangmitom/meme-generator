@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useMemeStore } from "./store/useMemeStore";
+import { useMemeStore } from "~/store/useMemeStore";
 
 useSeoMeta({
   title: "Meme generator",
@@ -14,7 +14,9 @@ onMounted(() => {
 
 <template>
   <header class="header">
-    <NuxtImg class="header__logo" src="/images/troll.png" alt="troll face" />
+    <NuxtLink to="/library">
+      <NuxtImg class="header__logo" src="/images/troll.png" alt="troll face" />
+    </NuxtLink>
     <div class="header__title">Meme generator</div>
     <span class="header__total">Total memes: {{ memeStore.total }}</span>
   </header>
@@ -31,6 +33,10 @@ onMounted(() => {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #f8eded;
 }
 
 .header {

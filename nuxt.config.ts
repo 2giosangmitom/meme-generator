@@ -17,5 +17,5 @@ export default defineNuxtConfig({
       gen: 2,
     },
   },
-  modules: ["@nuxt/image", "nuxt-vuefire", "@pinia/nuxt"],
+  modules: ["@nuxt/image", "nuxt-vuefire", "@pinia/nuxt", "@nuxt/fonts"],
 });
